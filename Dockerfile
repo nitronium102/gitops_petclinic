@@ -1,5 +1,6 @@
 # 1단계: 빌드
 FROM maven:3.9.9-eclipse-temurin-17 AS builder
+LABEL maintainer="nitronium@cj.net"
 WORKDIR /build
 COPY . .
 RUN ./mvnw clean package -DskipTests
